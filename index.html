@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-i18n-title="index.title" data-i18n-desc="index.desc">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,22 +36,28 @@
      HEADER
      ====================================================== -->
 <header>
-  <div class="logo" role="button" tabindex="0" aria-label="Retour accueil">
+  <div class="logo" role="button" tabindex="0" aria-label="Retour accueil" data-i18n-attr="aria-label:logo.aria">
     <div class="logo-dot" aria-hidden="true"></div>
     Damien Balga
   </div>
 
-  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+  <div class="lang-switch" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.group">
+    <button type="button" class="lang-btn active" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français" title="Français">FR</button>
+    <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+    <button type="button" class="lang-btn" data-lang="de" lang="de" aria-pressed="false" aria-label="Deutsch" title="Deutsch">DE</button>
+  </div>
+
+  <button class="menu-toggle" data-i18n-attr="aria-label:menu.open" aria-label="Ouvrir le menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 
-  <nav aria-label="Navigation principale">
-    <a href="index.html" class="active">Accueil</a>
-    <a href="work.html">Réalisations</a>
-    <a href="stills.html">Stills</a>
-    <a href="#before">Avant / Après</a>
-    <a href="#about">À propos</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
+  <nav aria-label="Navigation principale" data-i18n-attr="aria-label:nav.aria">
+    <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+    <a href="work.html" data-i18n="nav.work">Réalisations</a>
+    <a href="stills.html" data-i18n="nav.stills">Stills</a>
+    <a href="#before" data-i18n="nav.ba">Avant / Après</a>
+    <a href="#about" data-i18n="nav.about">À propos</a>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a>
   </nav>
 </header>
 
@@ -59,7 +65,7 @@
      HERO
      Présentation + portrait flottant + stats
      ====================================================== -->
-<section aria-label="Présentation" style="background:transparent;">
+<section aria-label="Présentation" data-i18n-attr="aria-label:index.hero.aria" style="background:transparent;">
   <div class="hero">
 
     <!-- Texte gauche -->
@@ -67,10 +73,10 @@
 
       <!-- Badge disponibilité -->
       <div class="hero-badge">
-        <span>Disponible pour vos projets</span>
+        <span data-i18n="index.hero.badge">Disponible pour vos projets</span>
       </div>
 
-      <h1>
+      <h1 data-i18n="index.hero.h1">
         Étalonneur<br>
         <span class="accent-orange">Vidéo</span> &amp;
         <span class="accent-cyan">Coloriste</span>
@@ -78,7 +84,7 @@
 
       <p class="hero-tagline">// DaVinci Resolve · Color Grading · Look Development</p>
 
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="index.hero.desc">
         Je donne une <strong>identité visuelle forte</strong> à vos images.
         Films, clips, publicités — chaque image est traitée avec une approche
         sur mesure, inspirée du cinéma et des standards des productions modernes.
@@ -89,24 +95,24 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polygon points="5 3 19 12 5 21 5 3"/>
           </svg>
-          Voir mes réalisations
+          <span data-i18n="index.hero.cta1">Voir mes réalisations</span>
         </a>
-        <a href="contact.html" class="btn btn-secondary">Travaillons ensemble</a>
+        <a href="contact.html" class="btn btn-secondary" data-i18n="index.hero.cta2">Travaillons ensemble</a>
       </div>
 
       <!-- Statistiques rapides -->
       <div class="hero-stats">
         <div class="stat-item">
           <span class="stat-num" data-counter data-target="10" data-suffix="+">10+</span>
-          <span class="stat-label">Projets</span>
+          <span class="stat-label" data-i18n="index.stat.projects">Projets</span>
         </div>
         <div class="stat-item">
           <span class="stat-num" data-counter data-target="3">3</span>
-          <span class="stat-label">Formats</span>
+          <span class="stat-label" data-i18n="index.stat.formats">Formats</span>
         </div>
         <div class="stat-item">
           <span class="stat-num">1</span>
-          <span class="stat-label">Outil · DaVinci</span>
+          <span class="stat-label" data-i18n="index.stat.tool">Outil · DaVinci</span>
         </div>
       </div>
     </div>
@@ -115,11 +121,11 @@
     <div class="hero-right fade-up" style="transition-delay:0.2s">
       <div class="portrait-wrap">
         <div class="portrait-frame">
-          <img src="img/PP.jpg" alt="Damien Balga – Étalonneur vidéo">
+          <img src="img/PP.jpg" alt="Damien Balga – Étalonneur vidéo" data-i18n-attr="alt:index.portrait.alt">
         </div>
         <!-- Badge flottant -->
         <div class="portrait-badge">
-          <span class="pb-label">Logiciel</span>
+          <span class="pb-label" data-i18n="index.pb.label">Logiciel</span>
           <span class="pb-value">DaVinci Resolve</span>
         </div>
       </div>
@@ -136,8 +142,8 @@
   <div style="max-width:1200px; margin:0 auto; padding:80px 48px 40px;">
     <div class="section-header fade-up">
       <span class="section-eyebrow">Showreel</span>
-      <h2 id="reels-title">Extraits de projets</h2>
-      <p>Quelques aperçus de mes étalonnages — plein format.</p>
+      <h2 id="reels-title" data-i18n="index.reels.h2">Extraits de projets</h2>
+      <p data-i18n="index.reels.p">Quelques aperçus de mes étalonnages — plein format.</p>
       <div class="divider"><span class="d-dot"></span></div>
     </div>
   </div>
@@ -154,7 +160,7 @@
       <div class="reel-info">
         <div class="reel-num">01 / 05</div>
         <div class="reel-title">Swirly Bokeh</div>
-        <div class="reel-type">Loisir</div>
+        <div class="reel-type" data-i18n="type.leisure">Loisir</div>
       </div>
     </div>
   </div>
@@ -171,7 +177,7 @@
       <div class="reel-info">
         <div class="reel-num">02 / 05</div>
         <div class="reel-title">Serfa</div>
-        <div class="reel-type">Publicité</div>
+        <div class="reel-type" data-i18n="type.ad">Publicité</div>
       </div>
     </div>
   </div>
@@ -188,7 +194,7 @@
       <div class="reel-info">
         <div class="reel-num">03 / 05</div>
         <div class="reel-title">La Pomme</div>
-        <div class="reel-type">Film Interactif</div>
+        <div class="reel-type" data-i18n="type.interactive">Film Interactif</div>
       </div>
     </div>
   </div>
@@ -205,7 +211,7 @@
       <div class="reel-info">
         <div class="reel-num">04 / 05</div>
         <div class="reel-title">Lamborghini</div>
-        <div class="reel-type">Loisir</div>
+        <div class="reel-type" data-i18n="type.leisure">Loisir</div>
       </div>
     </div>
   </div>
@@ -222,7 +228,7 @@
       <div class="reel-info">
         <div class="reel-num">05 / 05</div>
         <div class="reel-title">Army Of Two</div>
-        <div class="reel-type">Loisir / VFX</div>
+        <div class="reel-type" data-i18n="type.leisurevfx">Loisir / VFX</div>
       </div>
     </div>
   </div>
@@ -230,9 +236,7 @@
   
 
   <div style="text-align:center; padding:48px 0;">
-    <a href="work.html" class="btn btn-secondary">
-      Voir toutes les réalisations →
-    </a>
+    <a href="work.html" class="btn btn-secondary" data-i18n="index.reels.all">Voir toutes les réalisations →</a>
   </div>
 </section>
 
@@ -243,51 +247,51 @@
 <section id="before" class="showcase" aria-labelledby="ba-title">
   <div class="section-inner">
     <div class="section-header fade-up">
-      <span class="section-eyebrow">Avant / Après</span>
-      <h2 id="ba-title">Before / After Grading</h2>
-      <p>Glissez pour comparer l'image brute et l'image étalonnée.</p>
+      <span class="section-eyebrow" data-i18n="index.ba.eyebrow">Avant / Après</span>
+      <h2 id="ba-title" data-i18n="index.ba.h2">Before / After Grading</h2>
+      <p data-i18n="index.ba.p">Glissez pour comparer l'image brute et l'image étalonnée.</p>
       <div class="divider"><span class="d-dot"></span></div>
     </div>
 
     <div class="compare-grid">
 
       <div class="compare fade-up">
-        <img src="img/before.jpg" alt="Avant étalonnage" class="img-before">
-        <img src="img/after.jpg"  alt="Après étalonnage" class="img-after">
+        <img src="img/before.jpg" alt="Avant étalonnage" data-i18n-attr="alt:ba.before.alt" class="img-before">
+        <img src="img/after.jpg"  alt="Après étalonnage" data-i18n-attr="alt:ba.after.alt" class="img-after">
         <div class="slider-line"></div>
         <div class="slider-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/>
           </svg>
         </div>
-        <span class="compare-label before-lbl">BEFORE</span>
-        <span class="compare-label after-lbl">AFTER</span>
+        <span class="compare-label before-lbl" data-i18n="ba.before">BEFORE</span>
+        <span class="compare-label after-lbl" data-i18n="ba.after">AFTER</span>
       </div>
 
       <div class="compare fade-up">
-        <img src="img/before2.jpg" alt="Avant étalonnage" class="img-before">
-        <img src="img/after2.jpg"  alt="Après étalonnage" class="img-after">
+        <img src="img/before2.jpg" alt="Avant étalonnage" data-i18n-attr="alt:ba.before.alt" class="img-before">
+        <img src="img/after2.jpg"  alt="Après étalonnage" data-i18n-attr="alt:ba.after.alt" class="img-after">
         <div class="slider-line"></div>
         <div class="slider-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/>
           </svg>
         </div>
-        <span class="compare-label before-lbl">BEFORE</span>
-        <span class="compare-label after-lbl">AFTER</span>
+        <span class="compare-label before-lbl" data-i18n="ba.before">BEFORE</span>
+        <span class="compare-label after-lbl" data-i18n="ba.after">AFTER</span>
       </div>
 
       <div class="compare fade-up">
-        <img src="img/before3.jpg" alt="Avant étalonnage" class="img-before">
-        <img src="img/after3.jpg"  alt="Après étalonnage" class="img-after">
+        <img src="img/before3.jpg" alt="Avant étalonnage" data-i18n-attr="alt:ba.before.alt" class="img-before">
+        <img src="img/after3.jpg"  alt="Après étalonnage" data-i18n-attr="alt:ba.after.alt" class="img-after">
         <div class="slider-line"></div>
         <div class="slider-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/>
           </svg>
         </div>
-        <span class="compare-label before-lbl">BEFORE</span>
-        <span class="compare-label after-lbl">AFTER</span>
+        <span class="compare-label before-lbl" data-i18n="ba.before">BEFORE</span>
+        <span class="compare-label after-lbl" data-i18n="ba.after">AFTER</span>
       </div>
 
     </div>
@@ -303,21 +307,21 @@
 
       <!-- Texte -->
       <div class="about-text fade-up">
-        <span class="section-eyebrow">À propos</span>
-        <h2 id="about-title">Passion pour<br>la couleur</h2>
+        <span class="section-eyebrow" data-i18n="index.about.eyebrow">À propos</span>
+        <h2 id="about-title" data-i18n="index.about.h2">Passion pour<br>la couleur</h2>
 
-        <p class="about-lead">
+        <p class="about-lead" data-i18n="index.about.lead">
           Je suis étalonneur vidéo spécialisé dans la <strong>création de look</strong>
           et d'émotions à travers la couleur.
         </p>
 
-        <p>
+        <p data-i18n="index.about.p1">
           J'aide les réalisateurs, marques et créateurs à donner une identité visuelle
           forte à leurs images. Mon travail se concentre sur la lumière, le contraste
           et la cohérence des couleurs afin de créer une ambiance unique et narrative.
         </p>
 
-        <p>
+        <p data-i18n="index.about.p2">
           Chaque projet est traité avec une approche sur mesure, inspirée du cinéma
           et des standards des productions modernes.
         </p>
@@ -325,17 +329,17 @@
         <div class="about-tags">
           <span class="tag tag-orange">Color Grading</span>
           <span class="tag tag-cyan">Look Development</span>
-          <span class="tag">Film</span>
-          <span class="tag">Clip</span>
-          <span class="tag">Publicité</span>
-          <span class="tag">Court-métrage</span>
+          <span class="tag" data-i18n="tag.film">Film</span>
+          <span class="tag" data-i18n="tag.clip">Clip</span>
+          <span class="tag" data-i18n="tag.ad">Publicité</span>
+          <span class="tag" data-i18n="tag.short">Court-métrage</span>
           <span class="tag tag-orange">DaVinci Resolve</span>
           <span class="tag">LUT Design</span>
         </div>
 
         <div style="margin-top:36px; display:flex; gap:14px; flex-wrap:wrap;">
-          <a href="work.html" class="btn btn-primary">Mes réalisations</a>
-          <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+          <a href="work.html" class="btn btn-primary" data-i18n="index.about.btn1">Mes réalisations</a>
+          <a href="contact.html" class="btn btn-secondary" data-i18n="index.about.btn2">Me contacter</a>
         </div>
       </div>
 
@@ -356,8 +360,8 @@
           <div class="scope-row">
             <div class="scope-item">
               <div class="scope-label">
-                Color Grading
-                <span>Expert</span>
+                <span data-i18n="scope.cg">Color Grading</span>
+                <span data-i18n="scope.expert">Expert</span>
               </div>
               <div class="scope-bar">
                 <div class="scope-fill fill-orange w-90"></div>
@@ -365,8 +369,8 @@
             </div>
             <div class="scope-item">
               <div class="scope-label">
-                Look Development
-                <span>Avancé</span>
+                <span data-i18n="scope.lookdev">Look Development</span>
+                <span data-i18n="scope.advanced">Avancé</span>
               </div>
               <div class="scope-bar">
                 <div class="scope-fill fill-cyan w-80"></div>
@@ -375,7 +379,7 @@
             <div class="scope-item">
               <div class="scope-label">
                 DaVinci Resolve
-                <span>Expert</span>
+                <span data-i18n="scope.expert">Expert</span>
               </div>
               <div class="scope-bar">
                 <div class="scope-fill fill-orange w-85"></div>
@@ -383,8 +387,8 @@
             </div>
             <div class="scope-item">
               <div class="scope-label">
-                Étalonnage Film
-                <span>Avancé</span>
+                <span data-i18n="scope.film">Étalonnage Film</span>
+                <span data-i18n="scope.advanced">Avancé</span>
               </div>
               <div class="scope-bar">
                 <div class="scope-fill fill-violet w-75"></div>
@@ -393,7 +397,7 @@
             <div class="scope-item">
               <div class="scope-label">
                 VFX / Compositing
-                <span>Intermédiaire</span>
+                <span data-i18n="scope.inter">Intermédiaire</span>
               </div>
               <div class="scope-bar">
                 <div class="scope-fill fill-cyan w-70"></div>
@@ -419,7 +423,7 @@
       <div class="logo-dot" aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 8px var(--orange);flex-shrink:0;"></div>
       Damien Balga
     </div>
-    <p>Étalonneur Vidéo · Coloriste</p>
+    <p data-i18n="footer.role">Étalonneur Vidéo · Coloriste</p>
   </div>
 
   <div class="footer-links">
@@ -431,6 +435,7 @@
   <div class="footer-right">© 2026 — Damien Balga</div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-i18n-title="work.title" data-i18n-desc="work.desc">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,7 +130,7 @@
 <div class="intro" aria-hidden="true">
   <div class="intro-scanline"></div>
   <div class="intro-content">
-    <h1>Réalisations</h1>
+    <h1 data-i18n="work.intro.h1">Réalisations</h1>
     <p class="intro-sub">Damien Balga · Colorist</p>
   </div>
 </div>
@@ -141,25 +141,31 @@
     <div class="logo-dot" aria-hidden="true"></div>
     Damien Balga
   </div>
-  <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+  <div class="lang-switch" role="group" aria-label="Langue" data-i18n-attr="aria-label:lang.group">
+    <button type="button" class="lang-btn active" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français" title="Français">FR</button>
+    <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+    <button type="button" class="lang-btn" data-lang="de" lang="de" aria-pressed="false" aria-label="Deutsch" title="Deutsch">DE</button>
+  </div>
+
+  <button class="menu-toggle" data-i18n-attr="aria-label:menu.label" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="work.html" class="active">Réalisations</a>
-    <a href="stills.html">Stills</a>
-    <a href="index.html#before">Avant / Après</a>
-    <a href="index.html#about">À propos</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
+    <a href="index.html" data-i18n="nav.home">Accueil</a>
+    <a href="work.html" class="active" data-i18n="nav.work">Réalisations</a>
+    <a href="stills.html" data-i18n="nav.stills">Stills</a>
+    <a href="index.html#before" data-i18n="nav.ba">Avant / Après</a>
+    <a href="index.html#about" data-i18n="nav.about">À propos</a>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a>
   </nav>
 </header>
 
 <!-- PAGE HERO -->
 <div class="page-hero-section">
   <div class="fade-up">
-    <span class="ph-eyebrow">Portfolio vidéo</span>
-    <h1>Mes Réalisations</h1>
-    <p>Color grading · Films · Publicités · Clips · Court-métrages</p>
+    <span class="ph-eyebrow" data-i18n="work.eyebrow">Portfolio vidéo</span>
+    <h1 data-i18n="work.h1">Mes Réalisations</h1>
+    <p data-i18n="work.sub">Color grading · Films · Publicités · Clips · Court-métrages</p>
   </div>
 </div>
 
@@ -171,21 +177,24 @@
 <div class="work-grid-section">
 
   <!-- BARRE DE FILTRES -->
-  <div class="filter-bar fade-up" role="group" aria-label="Filtrer par catégorie">
+  <div class="filter-bar fade-up" role="group" aria-label="Filtrer par catégorie" data-i18n-attr="aria-label:work.filter.aria">
     <button class="filter-btn active" data-filter="all">
-      Tout&nbsp;<span class="count" id="cnt-all">0</span>
+      <span data-i18n="work.f.all">Tout</span>&nbsp;<span class="count" id="cnt-all">0</span>
     </button>
     <button class="filter-btn" data-filter="film">
-      Film&nbsp;<span class="count" id="cnt-film">0</span>
+      <span data-i18n="work.f.film">Film</span>&nbsp;<span class="count" id="cnt-film">0</span>
     </button>
     <button class="filter-btn" data-filter="publicite">
-      Publicité&nbsp;<span class="count" id="cnt-publicite">0</span>
+      <span data-i18n="work.f.ad">Publicité</span>&nbsp;<span class="count" id="cnt-publicite">0</span>
     </button>
     <button class="filter-btn" data-filter="loisir">
-      Loisir&nbsp;<span class="count" id="cnt-loisir">0</span>
+      <span data-i18n="work.f.leisure">Loisir</span>&nbsp;<span class="count" id="cnt-loisir">0</span>
     </button>
     <button class="filter-btn" data-filter="regrade">
-      Regrade&nbsp;<span class="count" id="cnt-regrade">0</span>
+      <span data-i18n="work.f.regrade">Regrade</span>&nbsp;<span class="count" id="cnt-regrade">0</span>
+    </button>
+    <button class="filter-btn" data-filter="animalier">
+      <span data-i18n="work.f.animalier">Animalier</span>&nbsp;<span class="count" id="cnt-animalier">0</span>
     </button>
   </div>
 
@@ -195,7 +204,7 @@
     <!-- Message aucun résultat (masqué par défaut) -->
     <div class="no-results" id="noResults" aria-live="polite">
       <div class="no-res-icon">🎬</div>
-      <p>// Aucun projet dans cette catégorie</p>
+      <p data-i18n="work.none">// Aucun projet dans cette catégorie</p>
     </div>
 
 
@@ -208,7 +217,7 @@
       </iframe>
       <div class="work-info">
         <h3>Army Of Two</h3>
-        <p>Loisir</p>
+        <p data-i18n="type.leisure">Loisir</p>
       </div>
     </div>
     
@@ -220,7 +229,7 @@
       </iframe>
       <div class="work-info">
         <h3>Ducati FILA</h3>
-        <p>Loisir</p>
+        <p data-i18n="type.leisure">Loisir</p>
       </div>
     </div>
 
@@ -232,7 +241,7 @@
       </iframe>
       <div class="work-info">
         <h3>Lamborghini</h3>
-        <p>Loisir</p>
+        <p data-i18n="type.leisure">Loisir</p>
       </div>
     </div>
 
@@ -245,7 +254,7 @@
       </iframe>
       <div class="work-info">
         <h3>La Pomme</h3>
-        <p>Film Interactif</p>
+        <p data-i18n="type.interactive">Film Interactif</p>
       </div>
     </div>
 
@@ -258,7 +267,7 @@
       </iframe>
       <div class="work-info">
         <h3>Serfa</h3>
-        <p>Publicité</p>
+        <p data-i18n="type.ad">Publicité</p>
       </div>
     </div>
 
@@ -269,8 +278,8 @@
         loading="lazy" title="Serfa">
       </iframe>
       <div class="work-info">
-        <h3>Brasserie L'Imprimerie Passion</h3>
-        <p>Publicité</p>
+        <h3>Brasserie L'Imprimerie</h3>
+        <p data-i18n="type.ad">Publicité</p>
       </div>
     </div>
 
@@ -281,8 +290,8 @@
         loading="lazy" title="Serfa">
       </iframe>
       <div class="work-info">
-        <h3>Brasserie L'Imprimerie Histoire</h3>
-        <p>Publicité</p>
+        <h3>Brasserie L'Imprimerie</h3>
+        <p data-i18n="type.ad">Publicité</p>
       </div>
     </div>
 
@@ -293,8 +302,8 @@
         loading="lazy" title="Serfa">
       </iframe>
       <div class="work-info">
-        <h3>Brasserie L'Imprimerie Succession</h3>
-        <p>Publicité</p>
+        <h3>Brasserie L'Imprimerie</h3>
+        <p data-i18n="type.ad">Publicité</p>
       </div>
     </div>
 
@@ -308,7 +317,7 @@
       </iframe>
       <div class="work-info">
         <h3>Swirly Bokeh</h3>
-        <p>Loisir</p>
+        <p data-i18n="type.leisure">Loisir</p>
       </div>
     </div>
 
@@ -320,7 +329,7 @@
       </iframe>
       <div class="work-info">
         <h3>Combat Master TTI</h3>
-        <p>Loisir</p>
+        <p data-i18n="type.leisure">Loisir</p>
       </div>
     </div>
 
@@ -333,7 +342,7 @@
       </iframe>
       <div class="work-info">
         <h3>La Chasse</h3>
-        <p>Regrade cinématographique</p>
+        <p data-i18n="type.regrade">Regrade cinématographique</p>
       </div>
     </div>
 
@@ -345,7 +354,7 @@
       </iframe>
       <div class="work-info">
         <h3>True Detective</h3>
-        <p>Regrade cinématographique</p>
+        <p data-i18n="type.regrade">Regrade cinématographique</p>
       </div>
     </div>
 
@@ -357,7 +366,7 @@
       </iframe>
       <div class="work-info">
         <h3>Split Blue Look ARRI</h3>
-        <p>Regrade cinématographique</p>
+        <p data-i18n="type.regrade">Regrade cinématographique</p>
       </div>
     </div>
 
@@ -369,7 +378,136 @@
       </iframe>
       <div class="work-info">
         <h3>Hannibal Look ARRI</h3>
-        <p>Regrade cinématographique</p>
+        <p data-i18n="type.regrade">Regrade cinématographique</p>
+      </div>
+    </div>
+
+
+    <!-- ── ANIMALIER (YouTube) ───────────────────── -->
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/8PMYLclYIkM"
+        title="Panda Roux"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Panda Roux</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/t1RJhM52eE4"
+        title="Mangouste naine qui se chamaille"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Mangouste naine qui se chamaille</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/J5mCvtMPABY"
+        title="Serin des Canaries qui mange"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Serin des Canaries qui mange</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/P-Pjh-xJbHA"
+        title="Lynx Boréal"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Lynx Boréal</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/wlmh8d6By48"
+        title="Loutre Naine"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Loutre Naine</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/opJ5KAMYfMc"
+        title="Fauvette à tête noire femelle"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Fauvette à tête noire femelle</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/VVj7Xp8Wu74"
+        title="Rougequeue Noir"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Rougequeue Noir</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/5cDvUrfC978"
+        title="Martin Pêcheur"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Martin Pêcheur</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
+      </div>
+    </div>
+    <div class="work-item fade-up" data-category="animalier">
+      <iframe
+        src="https://www.youtube.com/embed/nm7ufa0LR58"
+        title="Colvert"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <div class="work-info">
+        <h3>Colvert</h3>
+        <p data-i18n="type.wildlife">Animalier</p>
       </div>
     </div>
 
@@ -383,7 +521,7 @@
       <div style="width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 8px var(--orange);flex-shrink:0;"></div>
       Damien Balga
     </div>
-    <p>Étalonneur Vidéo · Coloriste</p>
+    <p data-i18n="footer.role">Étalonneur Vidéo · Coloriste</p>
   </div>
   <div class="footer-links">
     <a href="https://www.youtube.com/@damienbalga" target="_blank" rel="noopener">YouTube</a>
@@ -393,6 +531,7 @@
   <div class="footer-right">© 2026 — Damien Balga</div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script>
 /* =============================================
